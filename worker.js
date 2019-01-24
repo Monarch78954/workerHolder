@@ -1,5 +1,5 @@
 var i = 0;
-function timeout(){
+function timeCount(){
     i=i+1;
     postMessage(i);
     srtTimeout("timeCount", 500);
