@@ -1,10 +1,8 @@
-var i = 0;
-
-function timedCount() {
-    i = i + 1;
-    postMessage(i);
-    setTimeout("timedCount()",500);
-}
-
-timedCount();
-
+addEventListener('message', ({data}) => {
+    if(data.action == 'count'){
+                 var i=0;
+                 for(i=0;i<200000000000;i++){
+                    postMessage({action:'count',value:i})
+                 }
+    }
+})
